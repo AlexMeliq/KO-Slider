@@ -1,0 +1,172 @@
+body, html, p, ul, li, tr, td
+{
+    margin: 0px;
+    box-sizing: border-box;
+	user-select: none;
+}
+a
+{
+    display: inline-block;
+}
+.slider, #images, #thumbnails
+{
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+#images
+{
+    border: 1px solid rgba(103, 103, 103, 0.27);
+    background: rgba(214, 214, 214, 0.42);
+}
+#images img
+{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: 50%;
+}
+#images #image
+{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+#images #image:first-child
+{
+    display: block;
+    opacity: 1;
+}
+.arLeft
+{
+    width:20%;
+    position: absolute;
+    left:0;
+    height: 100%;
+    top:0;
+    cursor: pointer;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    z-index: 30;
+}
+.arRight
+{
+    width:70%;
+    position: absolute;
+    right:0;
+    height: 100%;
+    top:0;
+    cursor: pointer;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    z-index: 30;
+}
+.arRight:hover
+{
+    background-image: url('../images/arR.png');
+}
+.arLeft:hover
+{
+    background-image: url('../images/arL.png');
+}
+#thumbnails
+{
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.hover, .active img
+{
+	opacity: 1 !important;
+    -webkit-filter: grayscale(0) !important;
+    filter: grayscale(0) !important;
+}
+#thumbnails img
+{
+    opacity: .5;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+#thumbnails img:hover
+{
+    opacity: 1;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+#thumbArrow.arLeft
+{
+    position: absolute;
+    left:0;
+    top:0;
+    cursor: pointer;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0;
+}
+#thumbArrow.arRight
+{
+    position: absolute;
+    right:0;
+    top:0;
+    cursor: pointer;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+#thumbnails:hover #thumbArrow.arRight
+{
+    background-image: url('../images/arR.png');
+}
+#thumbnails:hover #thumbArrow.arLeft
+{
+    background-image: url('../images/arL.png');
+}
+
+
+
+/*thumbnails*/
+#thumb
+{
+    display: block;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+}
+
+/*thumbnails circles*/
+.circle
+{
+	text-align: center;
+	padding:20px;
+}
+.circle li
+{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 7px;
+	cursor: pointer;
+	overflow: hidden;
+	list-style-type: none;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 100px;
+	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.circle li:hover, .activeCircle
+{
+	border: 2px solid rgb(152, 152, 152) !important;
+}
